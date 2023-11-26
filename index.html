@@ -39,9 +39,9 @@
 					<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
 						<ul class="nav navbar-nav menu_nav justify-content-end">
 							<li class="nav-item active"><a class="nav-link" href="index.html">Inicio</a></li>
-							<li class="nav-item"><a class="nav-link" href="">Sobre mi</a></li>
-							<li class="nav-item"><a class="nav-link" href="">Portafolio</a></li>
-							<li class="nav-item"><a class="nav-link" href="">Contáctame</a></li>
+							<li class="nav-item"><a class="nav-link" href="#sobre-mi">Sobre mi</a></li>
+							<li class="nav-item"><a class="nav-link" href="#portfolio">Portafolio</a></li>
+							<li class="nav-item"><a class="nav-link" href="https://walink.co/828a14" target="_blank">Contáctame</a></li>
 						</ul>
 					</div>
 				</div>
@@ -62,7 +62,7 @@
 							<h5 class="text-uppercase">Desarrolladora Web</h5>
 							<div class="d-flex align-items-center">
 								<a class="primary_btn" href="https://walink.co/828a14" target="_blank"><span>Mi Whatsapp</span></a>
-								<a class="primary_btn tr-bg" href="#"><span>Mi Hoja de Vida</span></a>
+								<a class="primary_btn tr-bg" href="hojadevida-rosanyelis-mendoza.pdf" target="_blank"><span>Mi Hoja de Vida</span></a>
 							</div>
 						</div>
 					</div>
@@ -78,12 +78,12 @@
 	<!--================ End Home Banner Area =================-->
 
 	<!--================ Start About Us Area =================-->
-	<section class="about_area section_gap">
+	<section id="sobre-mi" class="about_area section_gap">
 		<div class="container">
 			<div class="row justify-content-start align-items-center">
 				<div class="col-lg-5">
 					<div class="about_img">
-						<img class="" src="img/mi.png" alt="">
+						<img class="" src="img/mi.png" alt="Rosanyelis Mendoza">
 					</div>
 				</div>
 
@@ -364,6 +364,20 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
 	<script src="js/gmaps.min.js"></script>
 	<script src="js/theme.js"></script>
+	<script src="js/smoothscroll.js"></script>
+	<script>
+		let buttons = document.querySelectorAll('.navbar .nav-link');
+		buttons.forEach((button) => {
+		  button.addEventListener('click', (e) => {
+			e.preventDefault();
+			let target = e.currentTarget.getAttribute('href');
+	
+			document.querySelector(target).scrollIntoView({
+			  behavior: 'smooth'
+			});
+		  });
+		});
+	  </script>
 </body>
 
 </html>
